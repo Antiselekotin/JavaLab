@@ -6,8 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class TimerTool {
-
-    private SpeedBar speed = new SpeedBar();
     private DoorBar doorBar = new DoorBar();
     private FloorBar floorBar = new FloorBar();
     private Integer[] taskList = new Integer[10];
@@ -25,7 +23,7 @@ public class TimerTool {
             }
         }
         if (taskList[1] == null) {
-            timer = new Timer(5000 / speed.getState(), new ActionListener() {
+            timer = new Timer(1500, new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     doorBar.setState(false);

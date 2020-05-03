@@ -6,10 +6,6 @@ public class DoorBar implements IChangeUI {
     private static boolean state = true;
     private static Text text;
 
-    public boolean getState() {
-        return state;
-    }
-
     public void setState(boolean state) {
         this.state = state;
         changeUI(this.text);

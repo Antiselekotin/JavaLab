@@ -44,9 +44,6 @@ public class Controller {
     private Button button9;
 
     @FXML
-    private Button buttonX;
-
-    @FXML
     private Text floor;
 
     @FXML
@@ -56,19 +53,6 @@ public class Controller {
     void initialize() {
         lift = new Lift(floor, door);
         Button[] buttonArr = {button1, button2, button3, button4, button5, button6, button7, button8, button9};
-        buttonX.setOnAction(event -> {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/view/settings.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.showAndWait();
-        });
         for (int i = 0; i < buttonArr.length; i++) {
             int finalI = i;
             buttonArr[i].setOnAction(event -> {

@@ -5,7 +5,6 @@ import javafx.scene.text.Text;
 public class Lift extends DummyLift {
     private static FloorBar floorBar = new FloorBar();
     private static DoorBar doorBar = new DoorBar();
-    private static SpeedBar speedBar = new SpeedBar();
     private static TimerTool timerTool = new TimerTool();
 
     private Text floor;
@@ -23,10 +22,6 @@ public class Lift extends DummyLift {
 
     public static TimerTool getTimerTool() {
         return timerTool;
-    }
-
-    public SpeedBar getSpeedBar() {
-        return speedBar;
     }
 
     public FloorBar getFloorBar() {
